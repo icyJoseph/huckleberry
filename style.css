@@ -39,6 +39,9 @@ body {
 }
 
 /* Add styles here! */
+html {
+  font-size: 1.125rem;
+}
 
 body {
   background-color: var(--gray-60);
