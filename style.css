@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -9,4 +9,116 @@ body {
   padding: 0;
 }
 
+:root {
+  --base-space: 8px;
+
+  --sm-text: 1rem;
+  --md-text: 1.25rem;
+  --lg-text: 1.5rem;
+  --xl-text: 2rem;
+
+  --base-primary: 160deg, 100%;
+  --primary: hsl(var(--base-primary), 30%);
+
+  --base-secondary: 45deg, 100%;
+  --light-secondary: hsl(var(--base-secondary), 50%);
+  --dark-secondary: hsl(var(--base-secondary), 40%);
+
+  /* gray scale*/
+  --base-gray: 0deg, 0%;
+  --black: hsl(var(--base-gray), 0%);
+  --gray-10: hsl(var(--base-gray), 10%);
+  --gray-30: hsl(var(--base-gray), 30%);
+  --gray-40: hsl(var(--base-gray), 40%);
+  --gray-60: hsl(var(--base-gray), 60%);
+  --white: hsl(var(--base-gray), 100%);
+
+  --tablet-width: 768px;
+
+  --shadow: 0px 4px 0px;
+}
+
 /* Add styles here! */
+
+body {
+  background-color: var(--gray-60);
+}
+
+header {
+  background: var(--white);
+  box-shadow: var(--shadow) var(--gray-40);
+}
+
+main {
+  padding-top: calc(var(--base-space) * 6);
+}
+
+.max-width-wrapper {
+  max-width: var(--tablet-width);
+
+  margin: 0 auto;
+  padding-left: max(
+    0px,
+    min(calc(var(--base-space) * 4), calc((100vw - var(--tablet-width)) * 9999))
+  );
+  padding-right: max(
+    0px,
+    min(calc(var(--base-space) * 4), calc((100vw - var(--tablet-width)) * 9999))
+  );
+}
+
+.intro-chunk {
+  padding: calc(var(--base-space) * 4);
+}
+
+.card {
+  background-color: var(--white);
+
+  padding: calc(var(--base-space) * 4);
+  padding-top: var(--base-space);
+  padding-bottom: calc(var(--base-space) * 2);
+
+  box-shadow: var(--shadow) var(--gray-40);
+}
+
+.indented-heading {
+  width: fit-content;
+  background-color: var(--light-secondary);
+
+  font-weight: bold;
+  font-size: var(--md-text);
+
+  margin: 0;
+  padding: calc(var(--base-space) * 2);
+  padding-right: calc(var(--base-space) * 4);
+
+  padding-left: max(
+    calc(var(--base-space) * 4),
+    min(calc(var(--base-space) * 6), calc((100vw - var(--tablet-width)) * 9999))
+  );
+  margin-left: calc(var(--base-space) * -4);
+
+  margin-left: min(
+    calc(var(--base-space) * -4),
+    max(
+      calc(var(--base-space) * -6),
+      calc((100vw - var(--tablet-width)) * -9999)
+    )
+  );
+
+  box-shadow: var(--shadow) var(--dark-secondary);
+}
+
+.title {
+  font-size: var(--xl-text);
+}
+
+@media (min-width: 514px) {
+  .title {
+    font-size: var(--lg-text);
+  }
+}
+
+.intro-chunk strong {
+  color: var(--primary);
+}
