@@ -9,6 +9,11 @@ body {
   padding: 0;
 }
 
+/* Add styles here! */
+html {
+  font-size: 1.125rem;
+}
+
 :root {
   --base-space: 8px;
 
@@ -36,11 +41,6 @@ body {
   --tablet-width: 768px;
 
   --shadow: 0px 4px 0px;
-}
-
-/* Add styles here! */
-html {
-  font-size: 1.125rem;
 }
 
 body {
