@@ -50,7 +50,8 @@ header {
 }
 
 main {
-  padding-top: calc(var(--base-space) * 6);
+  padding-top: calc(var(--base-space) * 12);
+  padding-bottom: calc(var(--base-space) * 12);
 }
 
 .max-width-wrapper {
